@@ -1,0 +1,80 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#f0f4f8;color:#1a202c}
+
+/* HEADER */
+header{background:linear-gradient(135deg,#1B5E20,#2E7D32);color:#fff;padding:16px 24px;display:flex;align-items:center;gap:16px;box-shadow:0 2px 8px rgba(0,0,0,.3);flex-wrap:wrap}
+header h1{font-size:1.3rem;font-weight:700}
+header p{font-size:.8rem;opacity:.85;margin-top:2px}
+.badge{background:#F9A825;color:#1a1a1a;padding:3px 10px;border-radius:20px;font-size:.7rem;font-weight:700;margin-top:6px;display:inline-block}
+.update{margin-left:auto;font-size:.72rem;opacity:.85;text-align:right}
+
+/* KPI BAR */
+.kpi-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px 24px;background:#fff;border-bottom:2px solid #e2e8f0}
+.kpi{background:#f7fafc;border-radius:10px;padding:12px 16px;border-left:4px solid #2E7D32}
+.kpi .val{font-size:1.9rem;font-weight:800;color:#1B5E20}
+.kpi .lbl{font-size:.73rem;color:#718096;margin-top:2px;font-weight:600}
+.kpi .sub{font-size:.65rem;color:#a0aec0;margin-top:2px}
+
+/* MAIN */
+main{padding:16px 24px;display:grid;gap:16px}
+
+/* SECTION */
+.section{background:#fff;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08);overflow:hidden}
+.section-header{background:#1B5E20;color:#fff;padding:10px 18px;font-size:.85rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.section-header .total{background:rgba(255,255,255,.2);padding:2px 10px;border-radius:20px;font-size:.75rem;margin-left:auto}
+
+/* ETAPA GRID */
+.etapa-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #e2e8f0}
+.etapa-grid.two{grid-template-columns:1fr 1fr}
+.etapa-col{padding:14px 18px;border-right:1px solid #e2e8f0}
+.etapa-col:last-child{border-right:none}
+.etapa-col h4{font-size:.72rem;color:#4a5568;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f7fafc;font-size:.82rem}
+.stat-row:last-child{border-bottom:none}
+.stat-val{font-weight:800;font-size:1.05rem}
+.green{color:#22543d}.yellow{color:#744210}.red{color:#742a2a}.blue{color:#2a4365}.teal{color:#234e52}
+
+/* CHARTS */
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px}
+.chart-box{background:#f7fafc;border-radius:8px;padding:14px}
+.chart-box h4{font-size:.78rem;color:#4a5568;font-weight:700;margin-bottom:10px;text-align:center}
+
+/* FILTERS */
+.filters{display:flex;gap:10px;padding:12px 18px;flex-wrap:wrap;border-bottom:1px solid #e2e8f0;background:#f7fafc;align-items:center}
+.filters input,.filters select{border:1px solid #cbd5e0;border-radius:6px;padding:6px 10px;font-size:.8rem;flex:1;min-width:150px;outline:none;background:#fff}
+.filters input:focus,.filters select:focus{border-color:#2E7D32;box-shadow:0 0 0 2px rgba(46,125,50,.15)}
+.btn-clear{background:#e53e3e;color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:.8rem;cursor:pointer;white-space:nowrap}
+.btn-clear:hover{background:#c53030}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;max-height:480px;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:.78rem}
+thead{background:#1B5E20;color:#fff;position:sticky;top:0;z-index:1}
+th{padding:10px 12px;text-align:left;font-weight:600;white-space:nowrap}
+td{padding:8px 12px;border-bottom:1px solid #e2e8f0;vertical-align:middle}
+tr:hover td{background:#f0fff4}
+.table-info{padding:8px 18px;font-size:.75rem;color:#718096;background:#f7fafc;border-top:1px solid #e2e8f0}
+
+/* BADGES */
+.badge-est{padding:2px 8px;border-radius:12px;font-size:.67rem;font-weight:700;display:inline-block;white-space:nowrap}
+.bg-green{background:#c6f6d5;color:#22543d}
+.bg-yellow{background:#fefcbf;color:#744210}
+.bg-red{background:#fed7d7;color:#742a2a}
+.bg-blue{background:#bee3f8;color:#2a4365}
+.bg-teal{background:#b2f5ea;color:#234e52}
+.bg-gray{background:#e2e8f0;color:#4a5568}
+
+/* FOOTER */
+footer{text-align:center;padding:16px;font-size:.72rem;color:#718096;background:#fff;border-top:1px solid #e2e8f0;margin-top:8px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .kpi-bar{grid-template-columns:1fr 1fr}
+  .etapa-grid{grid-template-columns:1fr}
+  .etapa-grid.two{grid-template-columns:1fr}
+  .charts-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .kpi-bar{grid-template-columns:1fr}
+  header{gap:8px}
+}
